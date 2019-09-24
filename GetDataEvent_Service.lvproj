@@ -16,7 +16,7 @@
 		</Item>
 		<Item Name="Query" Type="Web Service">
 			<Property Name="Bld_buildSpecName" Type="Str"></Property>
-			<Property Name="Bld_version.build" Type="Int">21</Property>
+			<Property Name="Bld_version.build" Type="Int">22</Property>
 			<Property Name="ws.autoIncrementVersion" Type="Bool">true</Property>
 			<Property Name="ws.disconnectInline" Type="Bool">true</Property>
 			<Property Name="ws.disconnectTypeDefs" Type="Bool">false</Property>
@@ -30,7 +30,7 @@
 			<Property Name="ws.serveDefaultDoc" Type="Bool">true</Property>
 			<Property Name="ws.SSE2" Type="Bool">true</Property>
 			<Property Name="ws.static_permissions" Type="Str"></Property>
-			<Property Name="ws.version.build" Type="Int">21</Property>
+			<Property Name="ws.version.build" Type="Int">22</Property>
 			<Property Name="ws.version.fix" Type="Int">0</Property>
 			<Property Name="ws.version.major" Type="Int">1</Property>
 			<Property Name="ws.version.minor" Type="Int">0</Property>
@@ -52,9 +52,42 @@
 					<Property Name="ws.useHeaders" Type="Bool">true</Property>
 					<Property Name="ws.useStandardURL" Type="Bool">true</Property>
 				</Item>
+				<Item Name="GetAssetList.vi" Type="VI" URL="../GetAssetList.vi">
+					<Property Name="ws.buffered" Type="Bool">true</Property>
+					<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+					<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+					<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
+					<Property Name="ws.method" Type="Int">1</Property>
+					<Property Name="ws.outputFormat" Type="Int">4</Property>
+					<Property Name="ws.outputType" Type="Int">0</Property>
+					<Property Name="ws.permissions" Type="Str"></Property>
+					<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
+					<Property Name="ws.type" Type="Int">1</Property>
+					<Property Name="ws.uri" Type="Str"></Property>
+					<Property Name="ws.useHeaders" Type="Bool">true</Property>
+					<Property Name="ws.useStandardURL" Type="Bool">true</Property>
+				</Item>
+				<Item Name="GetLastTrend.vi" Type="VI" URL="../GetLastTrend.vi">
+					<Property Name="ws.buffered" Type="Bool">true</Property>
+					<Property Name="ws.includeNameInURL" Type="Bool">true</Property>
+					<Property Name="ws.keepInMemory" Type="Bool">true</Property>
+					<Property Name="ws.loadAtStartup" Type="Bool">true</Property>
+					<Property Name="ws.method" Type="Int">1</Property>
+					<Property Name="ws.outputFormat" Type="Int">4</Property>
+					<Property Name="ws.outputType" Type="Int">0</Property>
+					<Property Name="ws.permissions" Type="Str"></Property>
+					<Property Name="ws.requireAPIKey" Type="Bool">false</Property>
+					<Property Name="ws.type" Type="Int">1</Property>
+					<Property Name="ws.uri" Type="Str"></Property>
+					<Property Name="ws.useHeaders" Type="Bool">true</Property>
+					<Property Name="ws.useStandardURL" Type="Bool">true</Property>
+				</Item>
 			</Item>
 		</Item>
 		<Item Name="GetDataEvent_Service.vi" Type="VI" URL="../GetDataEvent_Service.vi"/>
+		<Item Name="New - GetStuff.vi" Type="VI" URL="../New - GetStuff.vi"/>
+		<Item Name="MakeSIGMU_Info.vi" Type="VI" URL="../subVIs/MakeSIGMU_Info.vi"/>
+		<Item Name="GetDataEvent_Service_2.vi" Type="VI" URL="../GetDataEvent_Service_2.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="AssetNodeReference.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/Base/controls/AssetNodeReference.ctl"/>
@@ -131,6 +164,20 @@
 				<Item Name="DataManagementGetDataForDataEventResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/main/DataManagementGetDataForDataEventResponse_Parse.vi"/>
 				<Item Name="DataManagementGetDataForDataEventRequestBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/controls/DataManagementGetDataForDataEventRequestBody.ctl"/>
 				<Item Name="DataManagementGetDataForDataEventRequest_Create.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/main/DataManagementGetDataForDataEventRequest_Create.vi"/>
+				<Item Name="DeviceModelHelpers.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/InsightCM/Utilities/DeviceModelHelpers/DeviceModelHelpers.lvlib"/>
+				<Item Name="AssetMgrQueryAssetNodeViewsResponseBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/AssetManager/controls/AssetMgrQueryAssetNodeViewsResponseBody.ctl"/>
+				<Item Name="AssetMgrQueryAssetNodeViewsResponse.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/AssetManager/controls/AssetMgrQueryAssetNodeViewsResponse.ctl"/>
+				<Item Name="AssetMgrQueryAssetNodeViewsResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/AssetManager/main/AssetMgrQueryAssetNodeViewsResponse_Parse.vi"/>
+				<Item Name="AssetNodeQueryParams.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/Base/controls/AssetNodeQueryParams.ctl"/>
+				<Item Name="AssetMgrQueryAssetNodeViewsRequestBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/AssetManager/controls/AssetMgrQueryAssetNodeViewsRequestBody.ctl"/>
+				<Item Name="AssetMgrQueryAssetNodeViewsRequest_Create.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/AssetManager/main/AssetMgrQueryAssetNodeViewsRequest_Create.vi"/>
+				<Item Name="DataManagementQueryTrendPointsResponseBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/controls/DataManagementQueryTrendPointsResponseBody.ctl"/>
+				<Item Name="DataManagementQueryTrendPointsResponse.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/controls/DataManagementQueryTrendPointsResponse.ctl"/>
+				<Item Name="DataManagementQueryTrendPointsResponse_Parse.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/main/DataManagementQueryTrendPointsResponse_Parse.vi"/>
+				<Item Name="TrendPointQueryParams.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/Base/controls/TrendPointQueryParams.ctl"/>
+				<Item Name="DataManagementQueryTrendPointsRequestBody.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/controls/DataManagementQueryTrendPointsRequestBody.ctl"/>
+				<Item Name="DataManagementQueryTrendPointsRequest_Create.vi" Type="VI" URL="/&lt;vilib&gt;/addons/InsightCM/MessageBus/MessageLibrary/DataManagement/main/DataManagementQueryTrendPointsRequest_Create.vi"/>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 			</Item>
 			<Item Name="ws_runtime.dll" Type="Document" URL="ws_runtime.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -142,6 +189,13 @@
 			<Item Name="GetDataEventsForEquipment.vi" Type="VI" URL="../subVIs/GetDataEventsForEquipment.vi"/>
 			<Item Name="ConvertDataSetToWfm.vi" Type="VI" URL="../subVIs/ConvertDataSetToWfm.vi"/>
 			<Item Name="GetDataForDataEvent.vi" Type="VI" URL="../subVIs/GetDataForDataEvent.vi"/>
+			<Item Name="GetAssetChildren.vi" Type="VI" URL="../../../../Users/NI/Desktop/InsightCM Examples/QueryData/subVIs/GetAssetChildren.vi"/>
+			<Item Name="Asset Info.ctl" Type="VI" URL="../typedefs/Asset Info.ctl"/>
+			<Item Name="Sensor Info.ctl" Type="VI" URL="../typedefs/Sensor Info.ctl"/>
+			<Item Name="Metric Info.ctl" Type="VI" URL="../typedefs/Metric Info.ctl"/>
+			<Item Name="GetSensorNodesFromAsset.vi" Type="VI" URL="../subVIs/GetSensorNodesFromAsset.vi"/>
+			<Item Name="Q_Message.ctl" Type="VI" URL="../typedefs/Q_Message.ctl"/>
+			<Item Name="GetTrendPoints.vi" Type="VI" URL="../../../../Users/NI/Desktop/InsightCM Examples/QueryData/subVIs/GetTrendPoints.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="GetDataEvent_Service" Type="EXE">
@@ -194,6 +248,69 @@
 				<Property Name="TgtF_productName" Type="Str">GetDataEvent_Service</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{3B15DC03-983A-4F44-A0AE-57696BD43658}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">GetDataEvent_Service.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+			<Item Name="GetDataEvent_Service_2" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{67B53432-F2F9-421C-B07B-FE12CBADE9E3}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{1C8B93ED-C818-4E29-9BC0-BB0E8C13521B}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_webService.count" Type="Int">1</Property>
+				<Property Name="App_webService[0].itemID" Type="Ref">/My Computer/Query</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{571B4F53-74DD-4CC2-9949-62256CAD96C5}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">GetDataEvent_Service_2</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/GetDataEvent_Service_2/NI_AB_PROJECTNAME</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{BBB465D6-505A-4EAD-9477-38CD597B1C27}</Property>
+				<Property Name="Bld_version.build" Type="Int">16</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">GetDataEvent_Service_2.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/GetDataEvent_Service_2/NI_AB_PROJECTNAME/GetDataEvent_Service_2.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/GetDataEvent_Service_2/NI_AB_PROJECTNAME/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{EDDA3B9F-587B-4089-8359-206560A2C3EB}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Query/Web Resources/GetLastEvent.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/GetDataEvent_Service.vi</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/lib</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">Container</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/GetDataEvent_Service_2.vi</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[4].type" Type="Str">VI</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Query/Web Resources/GetAssetList.vi</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Query/Web Resources/GetLastTrend.vi</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">7</Property>
+				<Property Name="TgtF_companyName" Type="Str">National Instruments Corporate.</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">GetDataEvent_Service</Property>
+				<Property Name="TgtF_internalName" Type="Str">GetDataEvent_Service</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2019 National Instruments Corporate.</Property>
+				<Property Name="TgtF_productName" Type="Str">GetDataEvent_Service</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{F3F02ED8-E07F-4AF5-AB9B-3E20712093BB}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">GetDataEvent_Service_2.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
